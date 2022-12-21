@@ -6,20 +6,20 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Data Form
+          Data Ext Form
         </p>
         <form>
          <div className="input-container">
-           <label>Username </label>
+           <label>Release Version </label>
            <input type="text" name="uname" required />
          </div>
          <div className="input-container">
-           <label>Password </label>
+           <label>Model Type </label>
            <input type="password" name="pass" required />
          </div>
-         <div className="button-container">
-           <input type="submit" />
-         </div>
+         <Button block size="lg" type="submit">
+            Submit
+         </Button>
         </form>
       </header>
     </div>
