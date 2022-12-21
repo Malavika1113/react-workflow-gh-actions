@@ -5,8 +5,10 @@ on:
     inputs:
       Release_Version:
         type: string
+        required: true
       Model_Type:
         type: string
+        required: true
 
 jobs:
   set_variable:
@@ -16,6 +18,6 @@ jobs:
       - name: set_variable
         id: set_variable
         run: |
-          echo  ${{ github.event.inputs.Release_Version }}
-          echo  ${{ github.event.inputs.Model_Type }}
+          echo  $!
+          echo  $!
   
