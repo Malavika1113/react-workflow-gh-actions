@@ -32,6 +32,7 @@ jobs:
       run: |
         npm install
         npm install react-bootstrap bootstrap
+        yarn add react/jsx-runtime
 
     - name: Build
       run: npm run build
