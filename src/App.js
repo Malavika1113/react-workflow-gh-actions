@@ -10,7 +10,7 @@ const App = () => {
 
     try {
       const response = await fetch(https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml, {
-        method: 'GET',
+        method: 'GET'
         headers: {
 		  auth: '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'
         },
