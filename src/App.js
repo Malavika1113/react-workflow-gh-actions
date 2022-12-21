@@ -1,21 +1,27 @@
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import "./App.css";
 import React from 'react';
-function App() {
+import './App.css';
 
+function App() {
   return (
-    <div className="App w-100 min-vh-100 justify-content-center align-items-center d-flex">
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-	  <Card.Text>HI</Card.Text>
-          <Button variant="primary">
-            Hello
-          </Button>
-        </Card.Body>
-      </Card>
+    <div className="App">
+      <header className="App-header">
+        <p>
+          Data Ext Form
+        </p>
+        <form>
+         <div className="input-container">
+           <label>Release Version </label>
+           <input type="text" name="uname" required />
+         </div>
+         <div className="input-container">
+           <label>Model Type </label>
+           <input type="text" name="pass" required />
+         </div>
+         <div className="button-container">
+           <input type="submit" />
+         </div>
+        </form>
+      </header>
     </div>
   );
 }
