@@ -2,6 +2,18 @@ import React from 'react';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    fetch("https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml")
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          console.log(result);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
