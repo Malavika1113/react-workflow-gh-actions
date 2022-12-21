@@ -18,6 +18,6 @@ jobs:
       - name: set_variable
         id: set_variable
         run: |
-          echo  $!
-          echo  $!
+          echo ${{ github.event.inputs.Release_Version }}
+          echo  ${{ github.event.inputs.Model_Type }}
   
