@@ -29,19 +29,12 @@ jobs:
         key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
     - name: Install dependencies
-      run: npm install
+      run: |
+        npm install
+        npm install react-bootstrap bootstrap
 
     - name: Build
       run: npm run build
-      
-    - name: Workspace contents
-      run: |
-        echo "--------------DIR Contents-------------------"
-        ls
-      
-    - name: Repo name
-      run: |
-        echo ${{ github.repository }} is repo name
         
     - name: Deploy
       run: |
