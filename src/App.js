@@ -4,7 +4,14 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    fetch("https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml")
+    fetch("https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-B.yml/dispatches -d '{"ref":"master","inputs":{"name":"Mona the Octocat","home":"San Francisco, CA"}}'", {
+      Method: 'POST',
+      Headers: {
+        'Accept': 'application/vnd.github+json',
+        'Authorization': 'Bearer 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'
+        'X-GitHub-Api-Version': '2022-11-28'
+        },
+      })
       .then((res) => res.json())
       .then(
         (result) => {
