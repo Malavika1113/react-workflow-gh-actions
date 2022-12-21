@@ -14,7 +14,7 @@ const App = () => {
         method: 'GET',
         headers: {
 		Accept: 'application/vnd.github+json',
-		Authorization: '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',
+		Authorization: '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',
         },
       });
 
