@@ -1,0 +1,21 @@
+name: Parent workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      Release_Version:
+        type: string
+     Model_Type:
+        type: string
+
+jobs:
+  set_variable:
+    name: set_variable
+    runs-on: ubuntu-latest
+    steps:
+      - name: set_variable
+        id: set_variable
+        run: |
+          echo  ${{ github.event.inputs.Release_Version }}
+          echo  ${{ github.event.inputs.Model_Type }}
+  
