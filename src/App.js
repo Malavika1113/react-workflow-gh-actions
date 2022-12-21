@@ -5,7 +5,7 @@ import React from 'react';
 function App() {
 
   return (
-    <div className="App w-100 min-vh-100 justify-content-center align-items-center d-flex flex-column">
+    <div className="App w-100 min-vh-100 justify-content-center align-items-center d-flex">
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
