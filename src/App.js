@@ -17,7 +17,6 @@ function App() {
           </Button>
         </Card.Body>
       </Card>
-      {repoData}
     </div>
   );
 }
