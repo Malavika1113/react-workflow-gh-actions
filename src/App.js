@@ -15,7 +15,7 @@ function App() {
          </div>
          <div className="input-container">
            <label>Model Type </label>
-           <input type="password" name="pass" required />
+           <input type="text" name="pass" required />
          </div>
          <div className="button-container">
            <input type="submit" />
