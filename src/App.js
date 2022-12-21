@@ -1,59 +1,24 @@
-import {useState} from 'react';
-import React from 'react';
-
-const App = () => {
-  const [data, setData] = useState({data: []});
-  const [isLoading, setIsLoading] = useState(false);
-  const [err, setErr] = useState('');
-
-  const handleClick = async () => {
-    setIsLoading(true);
-
-    try {
-      const response = await fetch('https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml', {
-        method: 'GET',
-        headers: {
-		Accept: 'application/vnd.github+json',
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error(`Error! status: ${response.status}`);
-      }
-
-      const result = await response.json();
-
-      console.log('result is: ', JSON.stringify(result, null, 4));
-
-      setData(result);
-    } catch (err) {
-      setErr(err.message);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  console.log(data);
+import { useEffect, useState } from "react";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import "./App.css";
+function App() {
 
   return (
-    <div>
-      {err && <h2>{err}</h2>}
-
-      <button onClick={handleClick}>Fetch data</button>
-
-      {isLoading && <h2>Loading...</h2>}
-
-      {data.data.map(person => {
-        return (
-          <div key={person.id}>
-            <h2>{person.name}</h2>
-            <h2>{person.path}</h2>
-            <br />
-          </div>
-        );
-      })}
+    <div className="App w-100 min-vh-100 justify-content-center align-items-center d-flex flex-column">
+      <Card style={{ width: "18rem" }}>
+        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Body>
+          <Card.Title>Card title</Card.Title>
+	  <Card.Text>HI</Card.Text>
+          <Button variant="primary">
+            Hello
+          </Button>
+        </Card.Body>
+      </Card>
+      {repoData}
     </div>
   );
-};
+}
 
 export default App;
