@@ -1,7 +1,7 @@
 name: Parent workflow
 
 on:
-  workflow_dispatch:
+  repository_dispatch:
 #     inputs:
 #       Release_Version:
 #         type: string
