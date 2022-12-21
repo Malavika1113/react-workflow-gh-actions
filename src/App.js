@@ -10,9 +10,7 @@ function App() {
           Data Form
         </p>
       </header>
-    </div>
-    <div className="form">
-     <form>
+      <form>
        <div className="input-container">
          <label>Username </label>
          <input type="text" name="uname" required />
@@ -27,7 +25,7 @@ function App() {
          <input type="submit" />
        </div>
      </form>
-   </div>
+    </div>
   );
 }
 
