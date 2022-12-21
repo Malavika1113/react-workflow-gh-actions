@@ -2,6 +2,18 @@ name: Parent workflow
 
 on:
   repository_dispatch:
+    types: [on-demand-test]
+    
+jobs:
+  run_if_failure:
+    if: ${{ !github.event.client_payload.passed }}
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          MESSAGE: ${{ github.event.client_payload.message }}
+        run: echo $MESSAGE
+        
+        
 #     inputs:
 #       Release_Version:
 #         type: string
@@ -10,14 +22,14 @@ on:
 #         type: string
 #         required: true
 
-jobs:
-  set_variable:
-    name: set_variable
-    runs-on: ubuntu-latest
-    steps:
-      - name: set_variable
-        id: set_variable
-        run: echo "HEllo"
+# jobs:
+#   set_variable:
+#     name: set_variable
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: set_variable
+#         id: set_variable
+#         run: echo "HEllo"
 #         run: |
 #           echo ${{ github.event.inputs.Release_Version }}
 #           echo  ${{ github.event.inputs.Model_Type }}
