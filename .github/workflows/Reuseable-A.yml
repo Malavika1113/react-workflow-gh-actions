@@ -5,7 +5,7 @@ on:
     inputs:
       Release_Version:
         type: string
-     Model_Type:
+      Model_Type:
         type: string
 
 jobs:
