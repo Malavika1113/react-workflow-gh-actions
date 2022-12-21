@@ -6,20 +6,28 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Data Form
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
+    <div className="form">
+     <form>
+       <div className="input-container">
+         <label>Username </label>
+         <input type="text" name="uname" required />
+         {renderErrorMessage("uname")}
+       </div>
+       <div className="input-container">
+         <label>Password </label>
+         <input type="password" name="pass" required />
+         {renderErrorMessage("pass")}
+       </div>
+       <div className="button-container">
+         <input type="submit" />
+       </div>
+     </form>
+   </div>
   );
 }
 
