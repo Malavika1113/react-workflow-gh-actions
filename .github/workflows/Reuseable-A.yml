@@ -2,13 +2,13 @@ name: Parent workflow
 
 on:
   workflow_dispatch:
-    inputs:
-      Release_Version:
-        type: string
-        required: true
-      Model_Type:
-        type: string
-        required: true
+#     inputs:
+#       Release_Version:
+#         type: string
+#         required: true
+#       Model_Type:
+#         type: string
+#         required: true
 
 jobs:
   set_variable:
@@ -17,7 +17,8 @@ jobs:
     steps:
       - name: set_variable
         id: set_variable
-        run: |
-          echo ${{ github.event.inputs.Release_Version }}
-          echo  ${{ github.event.inputs.Model_Type }}
+        run: echo "HEllo"
+#         run: |
+#           echo ${{ github.event.inputs.Release_Version }}
+#           echo  ${{ github.event.inputs.Model_Type }}
   
