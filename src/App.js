@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Button from "react-bootstrap/Button";
 
 function App() {
   return (
@@ -18,9 +17,9 @@ function App() {
            <label>Model Type </label>
            <input type="password" name="pass" required />
          </div>
-         <Button block size="lg" type="submit">
-            Submit
-         </Button>
+         <div className="button-container">
+           <input type="submit" />
+         </div>
         </form>
       </header>
     </div>
