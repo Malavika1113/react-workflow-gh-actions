@@ -18,11 +18,11 @@ const App = () => {
     	});
 
     let methodtype = 'POST';
-	 fetch('https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches', {
+	 fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
       method: methodtype,
       headers: {
 	   'Accept': 'application/vnd.github+json',
-	   'Authorization': `Bearer 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`,
+	   'Authorization': `token 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`,
 	   'X-GitHub-Api-Version': '2022-11-28',
 	   'Access-Control-Allow-Origin': 'https://malavika1113.github.io/',
       },
