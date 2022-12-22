@@ -11,7 +11,6 @@ const App = () => {
 
 
   const handleClick = async () => {
-    setIsLoading(true);
 
     try {
       const response = await fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
