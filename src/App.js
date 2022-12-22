@@ -3,8 +3,8 @@ import React from 'react';
 
 const App = () => {
   const [data, setData] = useState({data: []});
-  const [isLoading,setIsLoading] = useState(false);
-  const [err,setErr] = useState('');
+//  const [isLoading,setIsLoading] = useState(false);
+//  const [err,setErr] = useState('');
   let userasd = {
   	ref: 'master'
 	};
@@ -34,9 +34,9 @@ const App = () => {
 
       setData(result);
     } catch (err) {
-      setErr(err.message);
+      //setErr(err.message);
     } finally {
-      setIsLoading(false);
+      //setIsLoading(false);
     }
   };
 
