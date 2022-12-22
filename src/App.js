@@ -22,7 +22,7 @@ const App = () => {
       method: methodtype,
       headers: {
 	   'Accept': 'application/vnd.github+json',
-	   'Authorization': `token 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`,
+	   'Authorization': `Bearer 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 `,
 	   'X-GitHub-Api-Version': '2022-11-28',
 	   'Access-Control-Allow-Origin': 'https://malavika1113.github.io/',
       },
