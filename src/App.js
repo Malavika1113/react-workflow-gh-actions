@@ -12,6 +12,27 @@ const App = () => {
 
   const handleClick = async () => {
 	  console.log("handleclick")
+	  let jsondata = JSON.stringify({
+      	ref: 'master',
+    	});
+
+    let methodtype = 'POST';
+	 fetch('https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches', {
+      method: 'POST',
+      headers: {
+	   'Accept': 'application/vnd.github+json',
+	   'Authorization': `Bearer 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`,
+	   'X-GitHub-Api-Version': '2022-11-28',
+      },
+      body: jsondata,
+    })
+      .then((responseData) => responseData.json())
+      .then(async (responseJson) => {
+       console.log('handle inside');
+      })
+      .catch((error) => {
+        console.log('error inside');
+      });
 
 //     try {
 //       const response = await fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
