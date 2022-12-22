@@ -4,8 +4,9 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches -d '{"ref":"master"}'`, {
+    fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
       Method: 'POST',
+      ref: 'master',
       Headers: {
         'Accept': 'application/vnd.github+json',
         'Authorization': `Bearer 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`,
