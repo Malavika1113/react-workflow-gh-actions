@@ -11,33 +11,34 @@ const App = () => {
 
 
   const handleClick = async () => {
+	  console.log("handleclick")
 
-    try {
-      const response = await fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
-        Method: 'POST',
-		Headers: {
-			'Accept': 'application/vnd.github+json',
-			'Authorization': `Bearer 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`,
-			'X-GitHub-Api-Version': '2022-11-28',
-			'Content-Type': 'application/json;charset=utf-8'
-			},
-		Body: JSON.stringify(userasd)
-      });
+//     try {
+//       const response = await fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
+//         Method: 'POST',
+// 		Headers: {
+// 			'Accept': 'application/vnd.github+json',
+// 			'Authorization': `Bearer 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`,
+// 			'X-GitHub-Api-Version': '2022-11-28',
+// 			'Content-Type': 'application/json;charset=utf-8'
+// 			},
+// 		Body: JSON.stringify(userasd)
+//       });
 
-      if (!response.ok) {
-        throw new Error(`Error! status: ${response.status}`);
-      }
+//       if (!response.ok) {
+//         throw new Error(`Error! status: ${response.status}`);
+//       }
 
-      const result = await response.json();
+//       const result = await response.json();
 
-      console.log('result is: ', JSON.stringify(result, null, 4));
+//       console.log('result is: ', JSON.stringify(result, null, 4));
 
-      setData(result);
-    } catch (err) {
-      //setErr(err.message);
-    } finally {
-      //setIsLoading(false);
-    }
+//       setData(result);
+//     } catch (err) {
+//       //setErr(err.message);
+//     } finally {
+//       //setIsLoading(false);
+//     }
   };
 
   console.log(data);
