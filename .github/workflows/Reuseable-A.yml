@@ -1,16 +1,25 @@
 name: Parent workflow
 
 on:
-  repository_dispatch:
-    types: [on-demand-test]
-    
+  workflow_dispatch:
+  
 jobs:
-  run_if_failure:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - env:
-          MESSAGE: ${{ github.event.client_payload.message }}
-        run: echo $MESSAGE
+      - run: Echo "Hello world"
+
+# on:
+#   repository_dispatch:
+#     types: [on-demand-test]
+    
+# jobs:
+#   run_if_failure:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - env:
+#           MESSAGE: ${{ github.event.client_payload.message }}
+#         run: echo $MESSAGE
         
         
 #     inputs:
