@@ -3,8 +3,8 @@ import React from 'react';
 
 const App = () => {
   const [data, setData] = useState({data: []});
-  const [isLoading, setIsLoading] = useState(false);
-  const [err, setErr] = useState('');
+  const [setIsLoading] = useState(false);
+  const [setErr] = useState('');
   let userasd = {
   	ref: 'master'
 	};
