@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f49015be4214ff71e07eff5311529c12",
+    "revision": "77aee6650cd48296ae54ef4ce1191897",
     "url": "/react-workflow-gh-actions/index.html"
   },
   {
-    "revision": "5b0e9bbf8bcb01812c07",
+    "revision": "04af70f1d7858aa38fcd",
     "url": "/react-workflow-gh-actions/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-workflow-gh-actions/static/js/2.3cb964e6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5b0e9bbf8bcb01812c07",
-    "url": "/react-workflow-gh-actions/static/js/main.d5a7cb7c.chunk.js"
+    "revision": "04af70f1d7858aa38fcd",
+    "url": "/react-workflow-gh-actions/static/js/main.c9298b9f.chunk.js"
   },
   {
     "revision": "448d559345594dc72292",
