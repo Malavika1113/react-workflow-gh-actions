@@ -3,8 +3,11 @@ import './App.css';
 import { useEffect } from "react";
 
 function App() {
+  let abc = {
+  ref: 'master'
+  };
   useEffect(() => {
-    await fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
+    let response = await fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
       Method: 'POST',
       Headers: {
         'Accept': 'application/vnd.github+json',
@@ -12,17 +15,10 @@ function App() {
         'X-GitHub-Api-Version': '2022-11-28',
         'Content-Type': 'application/json;charset=utf-8'
         },
-      Body: JSON.stringify({"ref": "master"})
-      })
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          console.log(result);
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
+      Body: JSON.stringify(abc)
+      });
+	  let result = await response.json();
+	  console.log(result)
   }, []);
   return (
     <div className="App">
