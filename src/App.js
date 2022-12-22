@@ -2,12 +2,12 @@ import {useState} from 'react';
 import React from 'react';
 
 const App = () => {
-  const [data, setData] = useState({data: []});
-//  const [isLoading,setIsLoading] = useState(false);
-//  const [err,setErr] = useState('');
-  let userasd = {
-  	ref: 'master'
-	};
+//   const [data, setData] = useState({data: []});
+// //  const [isLoading,setIsLoading] = useState(false);
+// //  const [err,setErr] = useState('');
+//   let userasd = {
+//   	ref: 'master'
+// 	};
 
 
   const handleClick = async () => {
