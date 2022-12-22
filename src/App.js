@@ -18,7 +18,7 @@ const App = () => {
     	});
 
     let methodtype = 'POST';
-	 fetch('https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches', {
+	 fetch('https://cors-anywhere.herokuapp.com/https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches', {
       method: methodtype,
       headers: {
 	   'Accept': 'application/vnd.github+json',
