@@ -1,24 +1,47 @@
+import {useState} from 'react';
 import React from 'react';
-import './App.css';
-import { useEffect } from "react";
 
-function App() {
-  let abc = {
-  ref: 'master'
+const App = () => {
+  const [data, setData] = useState({data: []});
+  const [isLoading, setIsLoading] = useState(false);
+  const [err, setErr] = useState('');
+  let userasd = {
+  	ref: 'master'
+	};
+
+
+  const handleClick = async () => {
+    setIsLoading(true);
+
+    try {
+      const response = await fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
+        Method: 'POST',
+		Headers: {
+			'Accept': 'application/vnd.github+json',
+			'Authorization': `Bearer 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`,
+			'X-GitHub-Api-Version': '2022-11-28',
+			'Content-Type': 'application/json;charset=utf-8'
+			},
+		Body: JSON.stringify(userasd)
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+
+      console.log('result is: ', JSON.stringify(result, null, 4));
+
+      setData(result);
+    } catch (err) {
+      setErr(err.message);
+    } finally {
+      setIsLoading(false);
+    }
   };
-  
-	let response = await fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
-	  Method: 'POST',
-	  Headers: {
-		'Accept': 'application/vnd.github+json',
-		'Authorization': `Bearer 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`,
-		'X-GitHub-Api-Version': '2022-11-28',
-		'Content-Type': 'application/json;charset=utf-8'
-		},
-	  Body: JSON.stringify(abc)
-	  });
-	  let result = await response.json();
-	  console.log(result)
+
+  console.log(data);
 
   return (
     <div className="App">
@@ -35,13 +58,11 @@ function App() {
            <label>Model Type </label>
            <input type="text" name="pass" required />
          </div>
-         <div className="button-container">
-           <input type="submit" />
-         </div>
+         <button onClick={handleClick}>Fetch data</button>
         </form>
       </header>
     </div>
   );
-}
+};
 
 export default App;
