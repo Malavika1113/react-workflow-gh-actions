@@ -9,9 +9,10 @@ function App() {
       Headers: {
         'Accept': 'application/vnd.github+json',
         'Authorization': `Bearer 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`,
-        'X-GitHub-Api-Version': '2022-11-28'
+        'X-GitHub-Api-Version': '2022-11-28',
+        'Content-Type': 'application/json'
         },
-      Body: JSON.stringify({"ref": 'master'})
+      Body: JSON.stringify({"ref": "master"})
       })
       .then((res) => res.json())
       .then(
