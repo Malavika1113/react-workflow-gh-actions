@@ -6,20 +6,20 @@ function App() {
   let abc = {
   ref: 'master'
   };
-  useEffect(() => {
-    let response = await fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
-      Method: 'POST',
-      Headers: {
-        'Accept': 'application/vnd.github+json',
-        'Authorization': `Bearer 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`,
-        'X-GitHub-Api-Version': '2022-11-28',
-        'Content-Type': 'application/json;charset=utf-8'
-        },
-      Body: JSON.stringify(abc)
-      });
+  
+	let response = await fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
+	  Method: 'POST',
+	  Headers: {
+		'Accept': 'application/vnd.github+json',
+		'Authorization': `Bearer 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`,
+		'X-GitHub-Api-Version': '2022-11-28',
+		'Content-Type': 'application/json;charset=utf-8'
+		},
+	  Body: JSON.stringify(abc)
+	  });
 	  let result = await response.json();
 	  console.log(result)
-  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
