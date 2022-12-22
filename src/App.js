@@ -23,7 +23,7 @@ const App = () => {
 	   'Accept': 'application/vnd.github+json',
 	   'Authorization': `Bearer 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`,
 	   'X-GitHub-Api-Version': '2022-11-28',
-	   'Access-Control-Allow-Origin': *
+	   'Access-Control-Allow-Origin': '*',
       },
       body: jsondata,
     })
