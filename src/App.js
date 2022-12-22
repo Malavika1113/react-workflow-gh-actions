@@ -24,7 +24,7 @@ const App = () => {
 	   'Accept': 'application/vnd.github+json',
 	   'Authorization': `Bearer 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`,
 	   'X-GitHub-Api-Version': '2022-11-28',
-	   'Access-Control-Allow-Origin': 'https://malavika1113.github.io/react-workflow-gh-actions/',
+	   'Access-Control-Allow-Origin': 'https://malavika1113.github.io/',
       },
       body: jsondata,
     })
@@ -81,7 +81,7 @@ const App = () => {
            <label>Model Type </label>
            <input type="text" name="pass" required />
          </div>
-         <button onClick={handleClick}>Fetch data</button>
+         <button onClick={handleClick}>BUILD</button>
         </form>
       </header>
     </div>
