@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: Echo "Hello world"
+      - run: echo "Hello world"
 
 # on:
 #   repository_dispatch:
