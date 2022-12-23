@@ -19,6 +19,7 @@ const App = () => {
 
     let methodtype = 'POST';
 	let auth = 'Bearer ' + process.env.API_KEY
+	console.log(jsondata)
 	console.log("appending auth")
 	console.log(auth)
 	 fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
@@ -27,7 +28,6 @@ const App = () => {
 	   'Accept': 'application/vnd.github+json',
 	   'Authorization': auth,
 	   'X-GitHub-Api-Version': '2022-11-28',
-	   'Access-Control-Allow-Origin': 'https://malavika1113.github.io/',
       },
       body: jsondata,
     })
