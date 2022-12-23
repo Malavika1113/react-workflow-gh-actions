@@ -29,12 +29,14 @@ jobs:
 
     - name: Build
       run: npm run build
+      env:
+          API_KEY: ${{ secrets.PAGES7 }}
         
     - name: Deploy
       run: |
          git config --global user.name "${{ runner.name }}"
          git config --global user.email $user_email
-         git remote set-url origin https://${{ secrets.PAGES5 }}@github.com/${repository}
+         git remote set-url origin https://${{ secrets.PAGES7 }}@github.com/${repository}
          npm run deploy
       env:
 #         user_name: 'github-actionsPages'
