@@ -18,6 +18,7 @@ const App = () => {
     	});
 
     let methodtype = 'POST';
+	let auth = 'Bearer' + process.env.API_KEY
 	 fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
       method: methodtype,
       headers: {
