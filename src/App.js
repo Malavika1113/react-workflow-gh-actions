@@ -22,7 +22,7 @@ const App = () => {
 	console.log(jsondata)
 	console.log("appending authsss")
 	console.log(auth)
-	console.log(process.env.test)
+	console.log(process.env.TEST)
 	 fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
       method: methodtype,
       headers: {
