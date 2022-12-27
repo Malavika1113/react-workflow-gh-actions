@@ -27,12 +27,19 @@ jobs:
         npm install
         npm install react-bootstrap bootstrap
       
+    - name: Create env file
+      run: |
+        ls
+        touch .env
+        echo TEST="1234asd" >> .env
+        cat .env
+        echo "env created successfully"
+        ls
 
     - name: Build
       run: npm run build
       env:
           API_KEY: ${{ secrets.PAGES7 }}
-          test: "123"
         
     - name: Deploy
       run: |
