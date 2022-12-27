@@ -26,7 +26,7 @@ const App = () => {
       method: methodtype,
       headers: {
 	   'Accept': 'application/vnd.github+json',
-	   'Authorization': auth,
+	   'Authorization': process.env.API_KEY,
 	   'X-GitHub-Api-Version': '2022-11-28',
       },
       body: jsondata,
