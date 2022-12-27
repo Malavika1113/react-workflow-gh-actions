@@ -20,13 +20,13 @@ const App = () => {
     let methodtype = 'POST';
 	let auth = 'Token ' + process.env.API_KEY
 	console.log(jsondata)
-	console.log("appending auths")
+	console.log("appending authsss")
 	console.log(auth)
 	 fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
       method: methodtype,
       headers: {
 	   'Accept': 'application/vnd.github+json',
-	   'Authorization': process.env.API_KEY,
+	   'Authorization': `Bearer ${process.env.API_KEY}`,
 	   'X-GitHub-Api-Version': '2022-11-28',
       },
       body: jsondata,
