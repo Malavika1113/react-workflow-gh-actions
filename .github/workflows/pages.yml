@@ -26,6 +26,8 @@ jobs:
       run: |
         npm install
         npm install react-bootstrap bootstrap
+      env:
+          API_KEY: ${{ secrets.PAGES7 }}
 
     - name: Build
       run: npm run build
