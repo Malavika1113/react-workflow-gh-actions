@@ -31,7 +31,7 @@ jobs:
       run: |
         ls
         touch .env
-        echo TEST="1234asd" >> .env
+        echo REACT_APP_TEST=1234asd >> .env
         cat .env
         echo "env created successfully"
         ls
