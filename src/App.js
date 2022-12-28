@@ -23,8 +23,10 @@ const App = () => {
 	console.log("appending authsss")
 	console.log(auth)
 	console.log("setting tokenss")
+	  /* eslint-disable no-unused-vars */
 	  const token = process.env.REACT_APP_TEST
 	  console.log(process.env.token)
+	  /* eslint-enable no-unused-vars */
 	 fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
       method: methodtype,
       headers: {
