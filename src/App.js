@@ -22,7 +22,7 @@ const App = () => {
 	console.log(jsondata)
 	console.log("appending authsss")
 	console.log(auth)
-	console.log("setting tokenss")
+	console.log("setting tokenssSSS")
 	  /* eslint-disable no-unused-vars */
 	  const token = process.env.REACT_APP_TEST
 	  console.log(process.env.REACT_APP_TEST)
@@ -31,7 +31,7 @@ const App = () => {
       method: methodtype,
       headers: {
 	   'Accept': 'application/vnd.github+json',
-	   'Authorization': `Bearer ${process.env.API_KEY}`,
+	   'Authorization': `Bearer ${process.env.REACT_APP_TOKEN}`,
 	   'X-GitHub-Api-Version': '2022-11-28',
       },
       body: jsondata,
