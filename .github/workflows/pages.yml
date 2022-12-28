@@ -32,14 +32,14 @@ jobs:
         ls
         touch .env
         echo REACT_APP_TEST=1234asd >> .env
+        echo REACT_APP_TOKEN=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 >> .env
         cat .env
         echo "env created successfully"
         ls
 
     - name: Build
       run: npm run build
-      env:
-          API_KEY: ${{ secrets.PAGES7 }}
+      
         
     - name: Deploy
       run: |
