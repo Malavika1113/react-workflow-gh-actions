@@ -22,7 +22,9 @@ const App = () => {
 	console.log(jsondata)
 	console.log("appending authsss")
 	console.log(auth)
-	console.log(process.env.TEST)
+	console.log("setting tokenss")
+	  const token = process.env.REACT_APP_TEST
+	  console.log(process.env.token)
 	 fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
       method: methodtype,
       headers: {
