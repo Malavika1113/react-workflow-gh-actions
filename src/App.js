@@ -22,17 +22,16 @@ const App = () => {
 	console.log(jsondata)
 	console.log("appending authsss")
 	console.log(auth)
-	console.log("setting tokenssSSS")
+	console.log("setting tokenssSSSAAA")
 	  /* eslint-disable no-unused-vars */
 	  const token = process.env.REACT_APP_TEST
 	  console.log(process.env.REACT_APP_TEST)
 	  /* eslint-enable no-unused-vars */
-	  let apikey = `token ${process.env.REACT_APP_TOKEN}`
 	 fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
       method: methodtype,
       headers: {
 	   'Accept': 'application/vnd.github+json',
-	   'Authorization': apikey,
+	   'Authorization': `token ${process.env.GITHUB_TOKEN}`,
 	   'X-GitHub-Api-Version': '2022-11-28',
       },
       body: jsondata,
