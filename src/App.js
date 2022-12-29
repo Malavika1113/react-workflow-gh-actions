@@ -26,7 +26,6 @@ const App = () => {
 	  /* eslint-disable no-unused-vars */
 	  const token = process.env.REACT_APP_TEST
 	  console.log(process.env.REACT_APP_TEST)
-	  /* eslint-enable no-unused-vars */
 	 const apicall = await fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
       method: methodtype,
       headers: {
@@ -43,7 +42,7 @@ const App = () => {
       .catch((error) => {
         console.log('error inside');
       });
-
+	/* eslint-enable no-unused-vars */
 //     try {
 //       const response = await fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
 //         Method: 'POST',
