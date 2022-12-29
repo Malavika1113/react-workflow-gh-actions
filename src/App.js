@@ -15,7 +15,7 @@ const App = () => {
   const handleClick = async () => {
 	  console.log("handleclick")
 	  const octokit = new Octokit({
-  	auth: process.env.REACT_APP_TOKEN
+  	auth: process.env.GITHUB_TOKEN
 	})
 
 await octokit.request('POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches', {
