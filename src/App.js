@@ -1,6 +1,7 @@
 //import {useState} from 'react';
 import React from 'react';
 import './App.css';
+import { Octokit } from "@octokit/rest"  
 
 const App = () => {
 //   const [data, setData] = useState({data: []});
@@ -13,36 +14,53 @@ const App = () => {
 
   const handleClick = async () => {
 	  console.log("handleclick")
-	  let jsondata = JSON.stringify({
-      	ref: 'master',
-    	});
+	  const octokit = new Octokit({
+  	auth: process.env.GITHUB_TOKEN
+	})
 
-    let methodtype = 'POST';
-	let auth = 'Token ' + process.env.API_KEY
-	console.log(jsondata)
-	console.log("appending authsss")
-	console.log(auth)
-	console.log("setting tokenssSSSAAA")
-	  /* eslint-disable no-unused-vars */
-	  const token = process.env.REACT_APP_TEST
-	  console.log(process.env.REACT_APP_TEST)
-	 const apicall = await fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
-      method: methodtype,
-      headers: {
-	   'Accept': 'application/vnd.github+json',
-	   'Authorization': `token ${process.env.GITHUB_TOKEN}`,
-	   'X-GitHub-Api-Version': '2022-11-28',
-      },
-      body: jsondata,
-    })
-      .then((responseData) => responseData.json())
-      .then(async (responseJson) => {
-       console.log('handle inside');
-      })
-      .catch((error) => {
-        console.log('error inside');
-      });
-	/* eslint-enable no-unused-vars */
+await octokit.request('POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches', {
+  owner: 'Malavika1113',
+  repo: 'react-workflow-gh-actions',
+  workflow_id: 'Reuseable-A.yml',
+  ref: 'master'
+  
+})
+// 	  let jsondata = JSON.stringify({
+//       	ref: 'master',
+//     	});
+
+//     let methodtype = 'POST';
+// 	let auth = 'Token ' + process.env.API_KEY
+// 	console.log(jsondata)
+// 	console.log("appending authsss")
+// 	console.log(auth)
+// 	console.log("setting tokenssSSSAAA")
+// 	  /* eslint-disable no-unused-vars */
+// 	  const token = process.env.REACT_APP_TEST
+// 	  console.log(process.env.REACT_APP_TEST)
+// 	 const apicall = await fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
+//       method: methodtype,
+//       headers: {
+// 	   'Accept': 'application/vnd.github+json',
+// 	   'Authorization': `token ${process.env.GITHUB_TOKEN}`,
+// 	   'X-GitHub-Api-Version': '2022-11-28',
+//       },
+//       body: jsondata,
+//     })
+//       .then((responseData) => responseData.json())
+//       .then(async (responseJson) => {
+//        console.log('handle inside');
+//       })
+//       .catch((error) => {
+//         console.log('error inside');
+//       });
+// 	/* eslint-enable no-unused-vars */
+	  
+	  
+	  
+	  
+	  
+	  
 //     try {
 //       const response = await fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
 //         Method: 'POST',
