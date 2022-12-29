@@ -27,7 +27,7 @@ const App = () => {
 	  const token = process.env.REACT_APP_TEST
 	  console.log(process.env.REACT_APP_TEST)
 	  /* eslint-enable no-unused-vars */
-	 fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
+	 const apicall = await fetch(`https://api.github.com/repos/Malavika1113/react-workflow-gh-actions/actions/workflows/Reuseable-A.yml/dispatches`, {
       method: methodtype,
       headers: {
 	   'Accept': 'application/vnd.github+json',
