@@ -32,7 +32,7 @@ jobs:
       run: |
         npm install
         npm install react-bootstrap bootstrap
-        yarn add @octokit/rest
+        npm install octokit
       
     - name: Create env file
       run: |
