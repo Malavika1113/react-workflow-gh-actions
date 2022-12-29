@@ -7,7 +7,7 @@ permissions:
   actions: write
   
 env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
 jobs:
   build:
@@ -47,6 +47,8 @@ jobs:
 
     - name: Build
       run: npm run build
+      env:
+        TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
         
     - name: Deploy
