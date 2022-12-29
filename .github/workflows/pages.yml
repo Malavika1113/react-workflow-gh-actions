@@ -31,10 +31,13 @@ jobs:
     - name: Create env file
       run: |
         ls
+        echo "##################################"
         touch .env
         echo REACT_APP_TEST=1234asd >> .env
+        echo REACT_APP_TOKEN=${{ secrets.PAGES12 }} >> .env
         cat .env
         echo "env created successfully"
+        echo "##################################"
         ls
 
     - name: Build
