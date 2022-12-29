@@ -2,6 +2,7 @@ name: Pages
 
 on:
   workflow_dispatch:
+  
 
 jobs:
   build:
@@ -34,7 +35,6 @@ jobs:
         echo "##################################"
         touch .env
         echo REACT_APP_TEST=1234asd >> .env
-        echo REACT_APP_TOKEN=${{ secrets.PAGES12 }} >> .env
         cat .env
         echo "env created successfully"
         echo "##################################"
@@ -48,7 +48,7 @@ jobs:
       run: |
          git config --global user.name "${{ runner.name }}"
          git config --global user.email $user_email
-         git remote set-url origin https://${{ secrets.PAGES12 }}@github.com/${repository}
+         git remote set-url origin https://${{ secrets.PAGES13 }}@github.com/${repository}
          npm run deploy
       env:
 #         user_name: 'github-actionsPages'
