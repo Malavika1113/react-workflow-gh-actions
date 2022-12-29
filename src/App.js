@@ -31,7 +31,7 @@ const App = () => {
       method: methodtype,
       headers: {
 	   'Accept': 'application/vnd.github+json',
-	   'Authorization': `Bearer ${process.env.REACT_APP_TOKEN}`,
+	   'Authorization': `token ${process.env.REACT_APP_TOKEN}`,
 	   'X-GitHub-Api-Version': '2022-11-28',
       },
       body: jsondata,
