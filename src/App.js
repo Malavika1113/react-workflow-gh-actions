@@ -1,7 +1,7 @@
 //import {useState} from 'react';
 import React from 'react';
 import './App.css';
-import { Octokit } from "@octokit/rest"  
+import { Octokit } from "octokit";
 
 const App = () => {
 //   const [data, setData] = useState({data: []});
@@ -15,7 +15,7 @@ const App = () => {
   const handleClick = async () => {
 	  console.log("handleclick")
 	  const octokit = new Octokit({
-  	auth: process.env.GITHUB_TOKEN
+  		auth: process.env.TOKEN,
 	})
 
 await octokit.request('POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches', {
